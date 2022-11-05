@@ -26,7 +26,20 @@ function createElement(elementName, className = "", text = "") {
 }
 
 function applyHover(e) {
-  this.classList.add("hover");
+  let currentColor = this.style.backgroundColor;
+  let alpha = 0.1;
+  if (currentColor) {
+    let oldAlpha = Number(
+      currentColor
+        .substring(5, currentColor.length - 1)
+        .replace(/ /g, "")
+        .split(",")[3]
+    );
+    alpha += oldAlpha;
+  }
+
+  newColor = `rgba(0,0,0,${alpha})`;
+  this.style.backgroundColor = newColor;
 }
 
 function createGrid(gridSize = 16) {
@@ -45,7 +58,6 @@ function createGrid(gridSize = 16) {
     square.classList.add(`square-${i}`);
     square.addEventListener("mouseover", applyHover, {
       capture: true,
-      once: true,
     });
     grid.appendChild(square);
   }

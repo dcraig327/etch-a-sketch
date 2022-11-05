@@ -7,13 +7,12 @@
 /* 6 1/2" x 4 ½" */
 /* 500 x 320 */
 .square {
-  background-color: rgba(128, 128, 128, 0.2);
   width: 10px;
   height: 10px;
 }
 
 .hover {
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .button-container {
@@ -28,4 +27,6 @@
   flex-direction: row;
   flex-wrap: wrap;
   margin: auto;
+  mix-blend-mode: multiply;
+  border: 1px solid black;
 }

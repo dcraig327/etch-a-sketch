@@ -7,14 +7,11 @@
 /* 6 1/2" x 4 ½" */
 /* 500 x 320 */
 .square {
-  background-color: grey;
+  background-color: rgba(128, 128, 128, 0.1);
   height: 1.2rem;
   width: 1.2rem;
 }
 
-.grid {
+.grid-row {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5rem 0;
 }

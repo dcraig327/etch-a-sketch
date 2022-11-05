@@ -23,6 +23,10 @@ function createElement(elementName, className = "", text = "") {
   return element;
 }
 
+function applyHover(e) {
+  this.classList.add("hover");
+}
+
 function createGrid() {
   let grid = createElement("div", "grid");
   for (let i = 1; i <= 16; i++) {
@@ -31,6 +35,10 @@ function createGrid() {
     for (let j = 1; j <= 16; j++) {
       let square = createElement("div", "square");
       square.classList.add(`square-${i}-${j}`);
+      square.addEventListener("mouseover", applyHover, {
+        capture: true,
+        once: true,
+      });
       row.appendChild(square);
     }
     grid.appendChild(row);

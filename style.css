@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* og: */
+/* 6 1/2" x 4 ½" */
+/* 500 x 320 */
+.square {
+  background-color: grey;
+  height: 1.2rem;
+  width: 1.2rem;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+}
